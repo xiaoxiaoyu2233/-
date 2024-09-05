@@ -8,7 +8,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 elseif game.PlaceId == 13772394625 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/iopjklbnmsss/main/blade%20ball"))()
 --doors
-elseif game.PlaceId == 6516141723 and 6839171747 then
+elseif game.PlaceId == 6839171747 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/doo"))()
 --抢劫这里
 elseif game.PlaceId == 17483941801 then

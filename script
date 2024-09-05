@@ -1,1 +1,19 @@
-
+--ucmt
+if game.PlaceId == 6913960180 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ucm"))()
+--基本上是fnf
+elseif game.PlaceId == 6520999642 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/fnf"))()
+--刃与球
+elseif game.PlaceId == 13772394625 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/iopjklbnmsss/main/blade%20ball"))()
+--doors
+elseif game.PlaceId == 6516141723 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/doo"))()
+--抢劫这里
+elseif game.PlaceId == 17483941801 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/steal"))()
+--吃掉世界
+elseif game.PlaceId == 16480898254 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/eat"))()    
+end

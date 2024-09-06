@@ -7,6 +7,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 --刃与球
 elseif game.PlaceId == 13772394625 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/iopjklbnmsss/main/blade%20ball"))()
+--压力
+elseif game.PlaceId == 12552538292 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/pr"))()
 --doors
 elseif game.PlaceId == 6839171747 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/doo"))()

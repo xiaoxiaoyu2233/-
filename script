@@ -7,6 +7,12 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 --刃与球
 elseif game.PlaceId == 13772394625 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/iopjklbnmsss/main/blade%20ball"))()
+--meme海
+elseif game.PlaceId == 10260193230 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/me"))()
+--审判日
+elseif game.PlaceId == 4994661268 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ujd"))()
 --压力
 elseif game.PlaceId == 12552538292 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/pr"))()

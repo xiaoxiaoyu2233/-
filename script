@@ -28,6 +28,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 --吃掉世界
 elseif game.PlaceId == 16480898254 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/eat"))()    
+--madcity
+elseif game.PlaceId == 1224212277 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/city"))()
 end
 
 

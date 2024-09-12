@@ -1,1 +1,33 @@
-game.player.kick(114)
+--ucmt
+if game.PlaceId == 6913960180 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ucmt"))()
+--基本上是fnf
+elseif game.PlaceId == 6520999642 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/fnf"))()
+--meme海
+elseif game.PlaceId == 10260193230 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/meme"))()
+--审判日
+elseif game.PlaceId == 4994661268 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ujd"))()
+--审判日exp
+elseif game.PlaceId == 7150950346 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ujdexp"))()
+--压力
+elseif game.PlaceId == 12552538292 then
+loadstring(game:HttpGet("暂无"))()
+--doors
+elseif game.PlaceId == 6839171747 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/doorsall"))()
+--ulc单人版
+elseif game.PlaceId == 4789980733 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ulc"))()
+--madcity
+elseif game.PlaceId == 1224212277 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/madcity"))()
+--合成方块
+elseif game.PlaceId == 17679933883 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/block"))()
+end
+
+

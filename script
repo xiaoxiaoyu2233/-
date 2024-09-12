@@ -15,7 +15,7 @@ elseif game.PlaceId == 7150950346 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ujdexp"))()
 --压力
 elseif game.PlaceId == 12552538292 then
-loadstring(game:HttpGet("暂无"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/pr"))()
 --doors
 elseif game.PlaceId == 6839171747 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/doorsall"))()

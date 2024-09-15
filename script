@@ -22,6 +22,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 --ulc单人版
 elseif game.PlaceId == 4789980733 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ulch"))()
+--ulc单人版
+elseif game.PlaceId == 11305669230 then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ulch"))()
 --madcity
 elseif game.PlaceId == 1224212277 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/madcity"))()

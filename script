@@ -1,20 +1,20 @@
 --ucmt
-if game.Place == 6913960180 then
+if game.Placeid == 6913960180 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ucmt"))()
 --基本上是fnf
-elseif game.Place == 6520999642 then
+elseif game.Placeid == 6520999642 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/fnf"))()
 --meme海
-elseif game.Place == 10260193230 then
+elseif game.Placeid == 10260193230 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/meme"))()
 --审判日
-elseif game.Place == 4994661268 then
+elseif game.Placeid == 4994661268 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ujd"))()
 --审判日exp
-elseif game.Place == 7150950346 then
+elseif game.Placeid == 7150950346 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ujdexp"))()
 --压力
-elseif game.Place == 12552538292 then
+elseif game.Placeid == 12552538292 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/pr"))()
 --doors
 elseif game.Placeid == 6839171747 then
@@ -26,10 +26,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 elseif game.PlaceId == 11305669230 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/ulch"))()
 --madcity
-elseif game.Place == 1224212277 then
+elseif game.Placeid == 1224212277 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/madcity"))()
 --合成方块
-elseif game.Place == 17679933883 then
+elseif game.Placeid == 17679933883 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/block"))()
 end
 

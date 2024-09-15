@@ -17,7 +17,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/
 elseif game.Place == 12552538292 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/pr"))()
 --doors
-elseif game.Place == 6839171747 then
+elseif game.Placeid == 6839171747 then
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/moone/main/doorsall"))()
 --ulc单人版
 elseif game.PlaceId == 4789980733 then

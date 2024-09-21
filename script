@@ -1,1 +1,26 @@
+local SansHubID = {
+    ["高级版"] = {"13133113", "24242424"}, -- 高级版用户的UserId列表
+    ["普通版"] = {"35353535", "46464646"}  -- 普通版用户的UserId列表
+}
 
+game.Players.PlayerAdded:Connect(function(player)
+    local userId = player.UserId
+    
+    if table.find(SansHubID["高级版"], userId) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/pro"))()                  
+    elseif table.find(SansHubID["普通版"], userId) then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/normal"))()              
+    else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/ScriptLinhTinh/main/Scare.lua"))()       
+    end
+end)
+
+-- 辅助函数
+function table.find(list, value)
+    for _, v in pairs(list) do
+        if v == value then
+            return true
+        end
+    end
+    return false
+end

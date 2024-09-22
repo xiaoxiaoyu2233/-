@@ -11,6 +11,7 @@ local WhiteList2 = {
      [5525205705] = true, --QQ1938497126
      [4535626301] = true, --@gfdfg346
      [3783322755] = true, --QQ2810693261
+     [3441596568] = true, --black黑壳
 }
 
 local function checkLocalPlayerWhitelist()

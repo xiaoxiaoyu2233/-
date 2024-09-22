@@ -1,4 +1,4 @@
---whitelist1室高价2是普通
+--whitelist1是高级2是普通
 local WhiteList1 = {
      [7177321832] = true, -- @furry123
      [7074068735] = true, -- @Juns

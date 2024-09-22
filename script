@@ -1,6 +1,7 @@
 --whitelist1是高级2是普通
 local WhiteList1 = {
      [7177321832] = true, -- @furry123
+     [4481567261] = true, --QQ3685053799
      [7074068735] = true, -- @Juns
      [7069759636] = true, --群主号
      [7347094346] = true, --@332cbb

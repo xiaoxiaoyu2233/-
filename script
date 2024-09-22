@@ -1,1 +1,26 @@
+local WhiteList1 = {
+     [7069759636] = true, -- 高级
+}
 
+local WhiteList2 = {
+     [123] = true, -- 普通
+}
+
+local function checkLocalPlayerWhitelist()
+     local localPlayer = game.Players.LocalPlayer
+     if localPlayer then
+         local userId = localPlayer.UserId
+         
+         if WhiteList1[userId] then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/pro"))()     
+         elseif WhiteList2[userId] then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/normal"))()
+         else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TranVanBao1411/ScriptLinhTinh/main/Scare.lua"))()
+         end
+     else
+         print("停止绕过")
+     end
+end
+
+checkLocalPlayerWhitelist()

@@ -8,6 +8,7 @@ local WhiteList1 = {
      [3783322755] = true, --QQ2810693261
      [4535626301] = true, --QQ雨晨尘埃
      [6516141723] = true, --QQ2039484033
+     [3935063254] = true, --CRY
 }
 
 local WhiteList2 = {

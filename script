@@ -7,7 +7,7 @@ local WhiteList1 = {
      [7347094346] = true, --@332cbb
      [3783322755] = true, --QQ2810693261
      [4535626301] = true, --QQ雨晨尘埃
-     [6516141723] = true, --QQ2039484033
+     [4159642566] = true, --QQ2039484033
      [3935063254] = true, --CRY
 }
 
@@ -20,6 +20,7 @@ local WhiteList2 = {
      [3441596568] = true, --black黑壳
      [3560862806] = true, --人
      [3080586912] = true, --QQ易
+     [3491331799] = true, --
 }
 
 local function checkLocalPlayerWhitelist()

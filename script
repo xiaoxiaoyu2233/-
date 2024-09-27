@@ -9,6 +9,7 @@ local WhiteList1 = {
      [4535626301] = true, --QQ雨晨尘埃
      [4159642566] = true, --QQ2039484033
      [3935063254] = true, --CRY跑路时删除
+     [7318331596] = true, --无
 }
 
 local WhiteList2 = {

@@ -24,6 +24,7 @@ local WhiteList1 = {
      [7324722756] = true, --阿尔宙斯大帝
      [4571485966] = true, --无
      [7194924876] = true, --无
+     [4901802206] = true, --阿白小号
 }
 
 local WhiteList2 = {

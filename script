@@ -1,1 +1,53 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/pro"))() 
+--whitelist1是高级2是普通
+local WhiteList1 = {
+     [7177321832] = true, -- @furry123
+     [4481567261] = true, --QQ3685053799
+     [7074068735] = true, -- @Juns
+     [7069759636] = true, --群主号
+     [7347094346] = true, --@332cbb
+     [3783322755] = true, --QQ2810693261
+     [4535626301] = true, --QQ雨晨尘埃
+     [4159642566] = true, --QQ2039484033
+     [3935063254] = true, --CRY跑路时删除
+     [7318331596] = true, --无
+     [4324268206] = true, --管理员阿白
+     [3933365179] = true, --3246213387qq
+     [4134957266] = true, --3279297706
+     [2588945637] = true, --无2320241699
+     [5730309296] = true, --QQCC114
+     [4475274830] = true, --古月群主兄弟
+     [5525205705] = true, --QQ1938497126
+     [3573470567] = true, --大怨种被80
+}
+
+local WhiteList2 = {
+     [4811582256] = true, -- @梦叔
+     [0000000000] = true, --@无
+     [0000000000] = true, --
+     [7313827314] = true, --QQ2496395895
+     [3441596568] = true, --black黑壳
+     [3560862806] = true, --人
+     [3080586912] = true, --QQ易
+     [3491331799] = true, --无
+     [3660685471] = true, --无
+
+}
+
+local function checkLocalPlayerWhitelist()
+     local localPlayer = game.Players.LocalPlayer
+     if localPlayer then
+         local userId = localPlayer.UserId
+         
+         if WhiteList1[userId] then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/pro"))()     
+         elseif WhiteList2[userId] then
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/normal"))()
+         else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/gamemode/refs/heads/main/free"))()
+         end
+     else
+         print("停止绕过")
+     end
+end
+
+checkLocalPlayerWhitelist()

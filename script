@@ -2,4 +2,6 @@ if game.PlaceId == 6839171747 then --door
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/qinggame/refs/heads/main/doors1"))()                                                                                                                              
 elseif game.PlaceId == 13772394625 or game.PlaceId == 15509350986 or game.PlaceId == 14732610803 or game.PlaceId == 16331600459 or game.PlaceId == 15234596844 then  --blade ball
 loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/qinggame/refs/heads/main/blade%20ball"))()                                         
+elseif game.PlaceId == 16732694052 then --fish
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xiaoxiaoyu2233/qinggame/refs/heads/main/fish"))() 
 end

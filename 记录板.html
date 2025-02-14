@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>狼人杀记录板</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        #board {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 48%;
+        }
+
+        .square {
+            width: 90px;
+            height: 90px;
+            margin: 10px;
+            background-color: #444;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .square-number {
+            font-size: 24px;
+        }
+
+        .square-note {
+            font-size: 14px;
+            white-space: pre-wrap;
+            text-align: center;
+            max-width: 100%;
+            word-break: break-all;
+            padding: 2px;
+        }
+
+        .quick-notes-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .quick-notes {
+            background-color: #444;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-height: 80vh;
+            overflow-y: auto;
+            width: 80%;
+        }
+
+        .quick-note {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .quick-note:hover {
+            background-color: #00f;
+        }
+
+        #note-input {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        #watermark {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url('https://q1.qlogo.cn/g?b=qq&nk=3774330268&s=640');
+            background-size: cover;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .author {
+            position: fixed;
+            bottom: 60px;
+            right: 10px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .reset-button {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="board">
+        <div class="column" id="left-column"></div>
+        <div class="column" id="right-column"></div>
+    </div>
+    <input type="text" id="note-input" placeholder="输入备注">
+    <div class="quick-notes-container" id="quick-notes-container">
+        <div class="quick-notes" id="quick-notes"></div>
+    </div>
+    <div id="watermark">SansHub</div>
+    <div class="avatar"></div>
+    <div class="author">作者</div>
+    <button class="reset-button" id="reset-button">重置</button>
+    <script>
+        const leftColumn = document.getElementById('left-column');
+        const rightColumn = document.getElementById('right-column');
+        const noteInput = document.getElementById('note-input');
+        const quickNotesContainer = document.getElementById('quick-notes-container');
+        const quickNotes = document.getElementById('quick-notes');
+        const resetButton = document.getElementById('reset-button');
+        let selectedSquare = null;
+        
+        const quickNotesList = [
+            "1银水", "2银水", "1金水", "2金水", "1预言家", "2预言家", "1猎", "2猎", "1女巫", "2女巫"
+        ];
+
+        
+        function createSquare(column, number) {
+            const square = document.createElement('div');
+            square.className = 'square';
+            square.innerHTML = `<span class="square-number">${number}</span><span class="square-note"></span>`;
+            square.addEventListener('click', () => selectSquare(square));
+            square.addEventListener('contextmenu', (event) => {
+                event.preventDefault();
+                selectSquare(square); 
+                showQuickNotes(square);
+            });
+            column.appendChild(square);
+        }
+
+        
+        for (let i = 0; i < 6; i++) {
+            createSquare(leftColumn, i + 1);
+        }
+
+        
+        for (let i = 0; i < 3; i++) {
+            createSquare(rightColumn, i + 7);
+        }
+
+       
+        function selectSquare(square) {
+            if (selectedSquare) {
+                selectedSquare.style.backgroundColor = '#444';
+            }
+            selectedSquare = square;
+            square.style.backgroundColor = '#00f';
+            noteInput.value = square.querySelector('.square-note').textContent;
+        }
+
+        
+        function showQuickNotes(square) {
+            quickNotes.innerHTML = quickNotesList.map(note => `<div class="quick-note">${note}</div>`).join('');
+            quickNotesContainer.style.display = 'flex';
+            quickNotes.addEventListener('click', (event) => {
+                if (event.target.classList.contains('quick-note')) {
+                    const currentNote = square.querySelector('.square-note').textContent;
+                    const newNote = appendNote(currentNote, event.target.textContent); 
+                    square.querySelector('.square-note').textContent = newNote;
+                    noteInput.value = newNote;
+                    quickNotesContainer.style.display = 'none';
+                }
+            });
+        }
+
+        
+        function appendNote(currentNote, newNote) {
+            const notes = currentNote ? currentNote.split(', ') : []; 
+            if (!notes.includes(newNote)) { 
+                notes.push(newNote);
+            }
+            return notes.join(', '); 
+        }
+
+        
+        function resetNotes() {
+            const squares = document.querySelectorAll('.square');
+            squares.forEach(square => {
+                square.querySelector('.square-note').textContent = '';
+            });
+            noteInput.value = '';
+        }
+
+        
+        noteInput.addEventListener('input', () => {
+            if (selectedSquare) {
+                selectedSquare.querySelector('.square-note').textContent = noteInput.value;
+            }
+        });
+
+        
+        resetButton.addEventListener('click', resetNotes);
+    </script>
+</body>
+</html>
+
+//版权归作者所有任何偷盗二创未经允许来圈钱则追踪法律责任
